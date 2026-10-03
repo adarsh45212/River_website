@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #eef8ff;
+            color: #222;
+
+        }
+
+        header {
+            background: #006994;
+            color: white;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+
+        }
+
+        header h1 {
+            font-size: 28px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 17px;
+        }
+
+        nav a:hover {
+            color: #ffd700
+        }
+
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #0077a8, #00b4d8);
+        }
+
+        .hero h2 {
+            font-size: 42px;
+            margin-bottom: 15px;
+
+        }
+
+        ;
+
+        .hero p {
+            font-size: 18px;
+        }
+
+        .rivers {
+            padding: 18px 8%;
+        }
+
+        .rivers>h2 {
+            text-align: center;
+            font-size: 32PX;
+            margin-bottom: 35px;
+        }
+
+        .river-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+            text-align: center;
+            padding-bottom: 25px;
+
+        }
+
+        .card :hover {
+            /* border-radius: 12px; */
+            box-shadow: 0 5px 15px #09f7ff26;
+            scale: 1.01;
+
+
+        }
+
+        .card img {
+            width: 100%;
+            height: 210px;
+            object-fit: cover;
+        }
+
+        .card h3 {
+            font-size: 24px;
+            margin: 18px 0 10px;
+            color: #777474;
+        }
+
+        .card p {
+            padding-inline: 0 20px;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 18px;
+            padding: 10px 22px;
+            background-color: #0077a8;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+        }
+
+        .card .btn:hover {
+            background-color: #004f70;
+
+
+        }
+
+        /* River details */
+        .details {
+            display: none;
+            padding: 50px 10%
+        }
+
+        .details-box {
+            background: white;
+            max-width: 900px;
+            margin: auto;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .details-box h2 {
+            color: #006994;
+            margin-bottom: 20px;
+            font-size: 35px;
+        }
+
+        .details-box p {
+            line-height: 1.8;
+            margin-bottom: 12px;
+
+        }
+
+        .details-box img {
+            width: 100%;
+            max-height: 350px;
+            object-fit: cover;
+            border-image-repeat: 10px;
+            margin-bottom: 25px;
+        }
+
+        footer {
+            background: #004f70;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        @media (max-width:800px) {
+            .river-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+        @media(max-width: 550px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .river-container {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h2 {
+                /* font-size: ?; */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Indain Rivers</h1>
+        <nav>
+            <a href="#Home">Home</a>
+            <a href="#Rivers">Rivers</a>
+        </nav>
+    </header>
+    <!-- home page -->
+    <section class="hero" id="home">
+        <h2>Discover the Rivers of india</h2>
+        <p>Learn about indias major rivers, their origin, importance and jouney.</p>
+    </section>
+    <!-- Rivers -->
+    <section class="rivers" id="rivers">
+        <h2>Major Rivers of india</h2>
+        <div class="river-container">
+            <!-- Ganga -->
+            <div class="card">
+                <img src="Ganga.jpeg" alt="">
+                <h3>Ganga River</h3>
+                <p>One of india's most important rivers.</p>
+                <a href="#ganga" class="btn">Learn more</a>
+            </div>
+            <!-- Yamuna -->
+            <div class="card">
+                <img src="yamuna.webp" alt="">
+                <h3>Yamuna River</h3>
+                <p>A major river of northern India.</p>
+                <a href="#yamuna" class="btn">Learn more</a>
+            </div>
+            <!-- BRAHMAPUTRA -->
+            <div class="card">
+                <img src="BRAHMAPUTRA.jpg" alt="">
+                <h3>Brahmaputra River</h3>
+                <p>A major river of northeastern India.</p>
+                <a href="#Brahmaputra" class="btn">Learn more</a>
+            </div>
+            <!-- GODAVARI -->
+            <div class="card">
+                <img src="GODAVARI.jpeg" alt="">
+                <h3>Godavari River</h3>
+                <p>one of the major rivers of peninsular India</p>
+                <a href="#Godavari" class="btn">Learn more</a>
+            </div>
+
+            <!-- Krishna -->
+            <div class="card">
+                <img src="krishna.jpg" alt="">
+                <h3>Krishna River</h3>
+                <p>An important river of southern India.</p>
+                <a href="#Krishna" class="btn">Learn more</a>
+            </div>
+
+            <!-- Narmada -->
+            <div class="card">
+                <img src="Narmada.jpg" alt="">
+                <h3>Narmada River</h3>
+                <p>a major west-flowing river of India.</p>
+                <a href="#Narmada" class="btn">Learn more</a>
+            </div>
+
+        </div>
+
+    </section>
+    <!-- GANGA DETAILS -->
+    <section class="details" id="ganga">
+        <div class="details-box">
+            <img src="Ganga.jpeg" alt="">
+            <h2>Ganga River</h2>
+            <p> The Ganga is one ofthe most important rivers of india </p>
+            <p><b>Origin:</b>Gangotri Glacier</p>
+            <p><b>Important cities:</b>Haridwar, Kanpur,Prayagraj and Varanasi</p>
+            <p><b>Importance:</b>Agriculture,drinking water and religious importance.</p>
+            <a href="#home" class="btn">⬅️Back Home</a>
+        </div>
+    </section>
+    <!-- YAMUNA DETAILS  -->
+    <section class="details" id="yamuna">
+        <div class="details-box">
+            <img src="yamuna.webp" alt="">
+            <h2>Yamuna River</h2>
+            <p> The Yamuna is one of the major rivers of northern inda. </p>
+            <p><b>Origin:</b>Yamunotri Glacier</p>
+            <p><b> Important cities:</b>Delhi, Mathura and Agra</p>
+            <p><b>Importance:</b>Agriculture and water supply.</p>
+            <a href="#home" class="btn">⬅️Back Home</a>
+        </div>
+    </section>
+    <!-- BRAHMAPUTRA DETAILS   -->
+    <section class="details" id="Brahmaputra">
+        <div class="details-box">
+            <img src="BRAHMAPUTRA.jpg" alt="">
+            <h2>Brahmaputra River</h2>
+            <p> The Brahmaputra is a major river of northeastern India. </p>
+            <p><b>Origin:</b>Tibet </p>
+            <p><b> Important State:</b>Assam</p>
+            <p><b>Importance:</b>Agriculture , Transportation and water resources.</p>
+            <a href="#home" class="btn">⬅️Back Home</a>
+        </div>
+    </section>
+    <!-- Godavari DETAILS   -->
+    <section class="details" id="Godavari">
+        <div class="details-box">
+            <img src="GODAVARI.jpeg" alt="">
+            <h2>Godavari River</h2>
+            <p> Godavari is one of the major rivers of peninsular India. </p>
+            <p><b>Origin:</b>Maharashtra </p>
+            <p><b> Flow:</b>Eastern India</p>
+            <p><b>Importance:</b>Agriculture and irrigation.</p>
+            <a href="#home" class="btn">⬅️Back Home</a>
+        </div>
+    </section>
+    <!-- Krishna  DETAILS   -->
+    <section class="details" id="Krishna">
+        <div class="details-box">
+            <img src="BRAHMAPUTRA.jpg" alt="">
+            <h2>Krishna River</h2>
+            <p>The krishna is an important river of southern India</p>
+            <p><b>Origin:</b>Maharashtra </p>
+            <p><b> States:</b>Maharashtra, karnataka and Andhra Pradesh</p>
+            <p><b>Importance:</b>irrigation and Agriculture.</p>
+            <a href="#home" class="btn">⬅️Back Home</a>
+        </div>
+    </section>
+    <!-- Narmada  DETAILS   -->
+    <section class="details" id="Narmada">
+        <div class="details-box">
+            <img src="Narmada.jpg" alt="">
+            <h2>Narmada River</h2>
+            <p>Narmada is one of the major west-flowing river of India</p>
+            <p><b>Origin:</b>Maharashtra </p>
+            <p><b> States:</b>Madhya Pradesh and Gujarat</p>
+            <p><b>Importance:</b>irrigation and Agriculture and water supply.</p>
+            <a href="#home" class="btn">⬅️Back Home</a>
+        </div>
+    </section>
+    <footer>
+        ©️ 2026 Indian Rivers Project | class 10
+    </footer>
+    <style>
+        .details:target {
+            display: block;
+        }
+
+        .details:target~.rivers {
+            display: none;
+        }
+    </style>
+</body>
+
+</html>
